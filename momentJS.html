@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Moment DateTime Format</title>
+        <!-- reference Moment.js library -->
+
+        <script
+        src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"
+        type="text/javascript">
+        </script>
+
+    </head>
+
+    <body>
+        <h2>Moment Date</h2>
+        <!-- container for Moment.js output -->
+        <div id="displayMoment"></div>
+
+        <h2>JavaScript Date</h2>
+
+        <!-- container for JavaScript Date output -->
+        <div id="displayJsDate"></div>
+
+        <h2>Years, Months, Days between now and birth</h2>
+        <div id="timeBetween"></div>
+
+        <script type="text/javascript">
+            (function() {
+                const birthDay = moment("1996-01-18", "YYYY-MM-DD")
+                const thisYear = moment("2023-01-01", "YYYY-MM-DD")
+                const thisMonth = moment("2023-05-01", "YYYY-MM-DD")
+                const now = moment()
+                const yearsBetween = moment.duration(now.diff(birthDay)).years()
+                const monthsBetween = moment.duration(now.diff(thisYear)).months()
+                const daysBetween = moment.duration(now.diff(thisMonth)).days()
+                const totalDays = Math.round(moment.duration(now.diff(birthDay)).asDays())
+                const timeDiff = document.getElementById('timeBetween')
+                timeDiff.innerHTML = `${yearsBetween} years, ${monthsBetween} month, ${daysBetween} days OR ${totalDays} days old.`
+                // instantiate a moment object
+                var NowMoment = moment();
+
+                // instantiate a JavaScript Date object
+                var NowDate = new Date();
+
+                // display value of moment object in #displayMoment div
+                var eDisplayMoment = document.getElementById('displayMoment');
+                eDisplayMoment.innerHTML = NowMoment;
+                
+                // display value of Date object in #displayJsDate div
+                var eDisplayDate = document.getElementById('displayJsDate');
+                eDisplayDate.innerHTML = NowDate;
+            })();
+        </script>
+    </body>
+</html>
+
+<!-- // // Exercise
+// // Using the Moment.js library, try to solve the
+// // below problems:
+// // 1. Calculate the number of days between
+// // your birthdate and the current date
+
+
+// // 2. Display the number of years, months,
+// // and days between your birthdate and
+// // current date
+// // Example: 24 years, 8 months, and 26 days -->
