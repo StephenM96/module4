@@ -23,7 +23,21 @@
         <h2>Years, Months, Days between now and birth</h2>
         <div id="timeBetween"></div>
 
+        <h2>Closest Date</h2>
+        <div id="closestDate"></div>
+
         <script type="text/javascript">
+// // Exercise
+// // Using the Moment.js library, try to solve the
+// // below problems:
+// // 1. Calculate the number of days between
+// // your birthdate and the current date
+
+
+// // 2. Display the number of years, months,
+// // and days between your birthdate and
+// // current date
+// // Example: 24 years, 8 months, and 26 days -->
             (function() {
                 const birthDay = moment("1996-01-18", "YYYY-MM-DD")
                 const thisYear = moment("2023-01-01", "YYYY-MM-DD")
@@ -34,6 +48,20 @@
                 const daysBetween = moment.duration(now.diff(thisMonth)).days()
                 const totalDays = Math.round(moment.duration(now.diff(birthDay)).asDays())
                 const timeDiff = document.getElementById('timeBetween')
+
+//1. Given two dates, display the date closest
+// to the current date
+// 2. Given two dates, display whether the
+// first date is before or after the second
+// date
+// 3. Display the current time in London
+
+                const date1 = moment("1964-10-28", "YYYY-MM-DD")
+                const date2 = moment("1973-02-16", "YYYY-MM-DD")
+console.log('First ', date1)
+console.log('Second ', date2)
+
+                const diffDate1And2 = moment.duration(date1.diff(date2)).asMilliseconds()
                 timeDiff.innerHTML = `${yearsBetween} years, ${monthsBetween} month, ${daysBetween} days OR ${totalDays} days old.`
                 // instantiate a moment object
                 var NowMoment = moment();
@@ -53,14 +81,11 @@
     </body>
 </html>
 
-<!-- // // Exercise
-// // Using the Moment.js library, try to solve the
-// // below problems:
-// // 1. Calculate the number of days between
-// // your birthdate and the current date
 
 
-// // 2. Display the number of years, months,
-// // and days between your birthdate and
-// // current date
-// // Example: 24 years, 8 months, and 26 days -->
+<!-- 1. Given two dates, display the date closest
+to the current date
+2. Given two dates, display whether the
+first date is before or after the second
+date
+3. Display the current time in London -->
