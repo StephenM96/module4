@@ -11,13 +11,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
-background: #333;
+background: #f39494;
 }
 
 .calculator
 {
     position: relative;
     width: 300px;
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 10px;
+    background: #686262;
 }
 .calculator .buttons {
     position: relative;
@@ -91,16 +95,16 @@ background: #333;
 
 .calculator .buttons span#clear {
     grid-column: span 2;
-    background: #f44336;
+    background: #ac241b;
     color: #fff;
 }
 .calculator .buttons span#plus {
     grid-row: span 2;
-    background: #31a935;
+    background: #50af53;
     color: #fff;
 }
 .calculator .buttons span#equal {
     grid-row: span 2;
-    background: #2196f3;
+    background: #4c8abd;
     color: #fff;
 }
