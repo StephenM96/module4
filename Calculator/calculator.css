@@ -18,7 +18,7 @@ background: #f39494;
 {
     position: relative;
     width: 300px;
-    border: 1px solid black; 
+    border: 2px solid rgb(36, 35, 35); 
     border-radius: 5px;
     padding: 10px;
     background: #686262;
